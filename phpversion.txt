@@ -1,0 +1,2 @@
+# Create phpversion.txt
+echo "8.2" > phpversion.txt
