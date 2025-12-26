@@ -1,0 +1,10 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "composer install --no-dev --optimize-autoloader"
+  },
+  "deploy": {
+    "startCommand": "php -S 0.0.0.0:$PORT public/index.php",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
