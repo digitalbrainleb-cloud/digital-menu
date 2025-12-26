@@ -1,2 +1,1 @@
-# Create runtime.txt (Railway prefers this)
-echo "php-8.2" > runtime.txt
+php-8.2
