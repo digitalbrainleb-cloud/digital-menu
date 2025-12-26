@@ -5,5 +5,5 @@ WORKDIR /app
 COPY . .
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 RUN mkdir -p runtime web/assets && chmod -R 777 runtime web/assets
-# Railway automatically sets PORT, use it directly
-CMD php -S 0.0.0.0:$PORT public/index.php
+# Use fixed port 8080 (Railway maps it automatically)
+CMD php -S 0.0.0.0:8080 public/index.php
