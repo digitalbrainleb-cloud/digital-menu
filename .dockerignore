@@ -1,0 +1,10 @@
+cat > .dockerignore << 'EOF'
+.git
+.gitignore
+Dockerfile
+.dockerignore
+vendor/
+runtime/
+web/assets/
+*.log
+EOF
