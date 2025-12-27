@@ -11,9 +11,5 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --no-dev --no-interaction --optimize-autoloader
 
-# Copy start script
-COPY start.sh /app/start.sh
-RUN chmod +x /app/start.sh
-
-EXPOSE 8080
-CMD ["/app/start.sh"]
+# Directly set the startup command here
+CMD php -S 0.0.0.0:${PORT:-8080} public/index.php
